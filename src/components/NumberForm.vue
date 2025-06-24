@@ -1,8 +1,9 @@
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue';
-
+import Flag from './Flag.vue';
 const region_input = ref<any>();
+const id_input = ref<any>();
 const error_message = ref('');
 
 const state = reactive({
@@ -105,7 +106,7 @@ function onRegionKeyUp() {
 
 </script>
 <template>
-    <div class="car-number-form">
+    <div class="car-number-form" @click="id_input.focus()">
         
         <div class="car-number-form__id">
             <input type="text" name="number_id" id="number_id" 
@@ -114,6 +115,7 @@ function onRegionKeyUp() {
             class="car-number-form__input car-number-form__id-input"
             v-model="state.id_value"
             @keyup="onKeyUp"
+            ref="id_input"
             pattern="[АВЕКМНОРСТУХ1234567890]*">
         </div>
         <div class="car-number-form__region">
@@ -123,12 +125,13 @@ function onRegionKeyUp() {
             v-model="state.region_value"
             ref="region_input"
             class="car-number-form__input car-number-form__region-input"
+            style="top: 25px;"
             @keyup="onRegionKeyUp">
             <div class="car-number-form__region-bottom">
                 <span class="car-number-form__region-text">
                     RUS
                 </span>
-                <img src="/images/flag-icon.jpeg" alt="rus" class="car-number-form__region-icon">
+                <Flag />
             </div>
         </div>
     </div>
@@ -166,8 +169,16 @@ function onRegionKeyUp() {
         letter-spacing: 2px
         font-family: RoadNumbers, sans-serif
         letter-spacing: 6px
+    &__id
+        position: relative
+        height: 90px
+    &__input
+        position: absolute
+        top: -13px
+        height: 80px
+        z-index: 0
+        z-index: -1
     &__id-input
-        height: 100%
         padding-block: 5px
         padding-left: 10px
         font-size: 80px
@@ -204,7 +215,7 @@ function onRegionKeyUp() {
         font-size: 65px
     &__region-bottom
         position: absolute
-        bottom: -5px
+        bottom: 1px
         left: 50%
         transform: translateX(-50%)
         display: flex
@@ -216,5 +227,5 @@ function onRegionKeyUp() {
     &__region-icon
         width: 20px
     &__region-text
-        font-size: 20px
+        font-size: 14px
 </style>
