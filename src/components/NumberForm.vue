@@ -1,6 +1,7 @@
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue';
+// @ts-ignore
 import Flag from './Flag.vue';
 const region_input = ref<any>();
 const id_input = ref<any>();
@@ -20,7 +21,7 @@ function uppercaseNumberId() {
     state.id_value = state.id_value.toUpperCase(); 
 }
 
-function onKeyUp(e:any) {
+function onKeyUp () {
     // let value = e.target.value.toUpperCase();
     uppercaseNumberId();
     
