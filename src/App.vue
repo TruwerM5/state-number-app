@@ -43,6 +43,7 @@ function fillData () {
 <template>
   <div class="wrapper">
     <div v-if="isTextareaOpened" class="textarea-wrapper">
+      <button @click="fillData" class="apply-button">Готово</button>
       <textarea 
         v-model="textareaModel" 
         name="data" 
@@ -50,7 +51,6 @@ function fillData () {
         class="textarea"
         placeholder="Список номеров. Каждый номер на отдельной строке.в 888 ор 16"
       ></textarea>
-      <button @click="fillData" class="apply-button">Готово</button>
     </div>
     <div class="numbers">
       <NumberForm v-for="number in numbers" :key="number" :number="number" />

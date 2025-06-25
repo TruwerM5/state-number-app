@@ -85,7 +85,7 @@ const getRegion = computed(() => {
         justify-content: center
         letter-spacing: 6px
         height: 80px
-        @media screen and (min-width: 1568px)
+        @media screen and (min-width: 1200px)
             font-size: 80px
             letter-spacing: 8px
             padding-bottom: 30px
@@ -99,7 +99,9 @@ const getRegion = computed(() => {
         line-height: 1.8
         font-size: 55px
         height: 80px
-        padding-bottom: 25px
+        padding-bottom: 10px
+        @media screen and (min-width: 1200px)
+            padding-bottom: 35px
         .symbol
             letter-spacing: 4px
     &__region-bottom
