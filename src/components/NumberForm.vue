@@ -99,17 +99,9 @@ const getRegion = computed(() => {
         line-height: 1.8
         font-size: 55px
         height: 80px
-        padding-bottom: 40px
+        padding-bottom: 25px
         .symbol
             letter-spacing: 4px
-    &__region-input
-        display: block
-        position: absolute
-        top: 40%
-        height: fit-content
-        width: fit-content
-        transform: translateY(-50%)
-        font-size: 65px
     &__region-bottom
         position: absolute
         bottom: 1px
@@ -121,8 +113,6 @@ const getRegion = computed(() => {
         font-family: sans-serif
         font-weight: 600
         gap: 10px
-    &__region-icon
-        width: 20px
     &__region-text
         font-size: 16px
 </style>
