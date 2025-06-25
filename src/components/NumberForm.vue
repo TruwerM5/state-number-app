@@ -88,7 +88,7 @@ const getRegion = computed(() => {
         @media screen and (min-width: 1568px)
             font-size: 80px
             letter-spacing: 8px
-            padding-bottom: 10px
+            padding-bottom: 30px
     &__region
         position: relative
         display: flex
@@ -124,5 +124,5 @@ const getRegion = computed(() => {
     &__region-icon
         width: 20px
     &__region-text
-        font-size: 14px
+        font-size: 16px
 </style>

@@ -79,7 +79,7 @@ function fillData () {
 
 .textarea
   display: block
-  height: 80%
+  height: 70%
   width: 90%
   font-size: 16px
   padding: 20px

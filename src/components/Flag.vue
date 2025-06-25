@@ -11,8 +11,8 @@
 
 <style lang="sass" scoped>
 .flag
-    width: 28px
-    height: 17px
+    width: 22px
+    height: 14px
     display: flex
     flex-direction: column
     align-items: center
