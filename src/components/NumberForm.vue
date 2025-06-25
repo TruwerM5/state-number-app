@@ -21,7 +21,7 @@ const getLastSymbols = computed(() => {
 });
 
 const getRegion = computed(() => {
-    return props.number.slice(9).toUpperCase();
+    return props.number.slice(9, 12).toUpperCase().trim();
 });
 
 
@@ -29,34 +29,43 @@ const getRegion = computed(() => {
 
 </script>
 <template>
-    <div class="car-number-form">
-        <div class="car-number-form__id">
-           <span class="symbol">
-            {{ getFirstSymbol }}
-           </span>
-           <span class="symbol">
-            {{ getNumbers }}
-           </span>
-           <span class="symbol">
-            {{ getLastSymbols }}
-           </span>
-        </div>
-        <div class="car-number-form__region">
+    <div class="number-wrapper">
+        <div class="car-number-form">
+            <div class="car-number-form__id">
             <span class="symbol">
-                {{ getRegion }}
+                {{ getFirstSymbol }}
             </span>
-            <div class="car-number-form__region-bottom">
-                <span class="car-number-form__region-text">
-                    RUS
+            <span class="symbol">
+                {{ getNumbers }}
+            </span>
+            <span class="symbol">
+                {{ getLastSymbols }}
+            </span>
+            </div>
+            <div class="car-number-form__region">
+                <span class="symbol">
+                    {{ getRegion }}
                 </span>
-                <Flag />
+                <div class="car-number-form__region-bottom">
+                    <span class="car-number-form__region-text">
+                        RUS
+                    </span>
+                    <Flag />
+                </div>
             </div>
         </div>
     </div>
+    
 </template>
 
 <style lang="sass" scoped>
-
+.number-wrapper
+    background-color: #fff
+    width: fit-content
+    padding: 5px
+    width: 450px
+    border-radius: 14px
+    margin: 0 auto
 .car-number-form
     position: relative
     display: grid
@@ -68,6 +77,7 @@ const getRegion = computed(() => {
     margin: 0 auto
     max-height: 100px
     font-family: RoadNumbers
+    background-color: #fff
     &::before
         left: 5px
     &::after

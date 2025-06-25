@@ -102,8 +102,8 @@ function fillData () {
   
 .apply-button
   padding: 10px 20px
-  color: #fff
-  background-color: #000
+  color: #000
+  background-color: #fff
   border: none
   font-size: 16px
   border-radius: 5px
