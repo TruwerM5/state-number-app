@@ -63,9 +63,11 @@ const getRegion = computed(() => {
     background-color: #fff
     width: fit-content
     padding: 5px
-    width: 450px
     border-radius: 14px
     margin: 0 auto
+    width: 100%
+    @media screen and (min-width: 1200px)
+        width: 450px
 .car-number-form
     position: relative
     display: grid
